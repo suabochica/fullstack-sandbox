@@ -1,0 +1,14 @@
+{
+  "name": "conf",
+  "version": "1.0.0",
+  "description": "Using react hooks on app",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Suabochica",
+  "license": "ISC",
+  "packageManager": "pnpm@11.18.0"
+}
