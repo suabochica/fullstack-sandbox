@@ -166,6 +166,8 @@ importers:
 
   packages/03-conf: {}
 
+  packages/04-contacts: {}
+
   packages/04-contacts/client:
     dependencies:
       form-serialize:

@@ -1,61 +1,38 @@
-💆‍♂️ Contacts
-===========
+Contacts
+========
 
-Contacts app build with React as a playground project.
+Contacts app built with React as a playground project.
 
-🗂️ Folder structure
--------------------
+![Contacts App](client/assets/01-contacts.png)
 
-this project is composed by two parts:
+## Folder structure
 
-- `/contacts-fe`: folder with the frontend of the application build with React. For details, please review the README file of this project.
-- `/contacts-be`: folder with the backend of the application build with Node and Express. For details, please review the README file of this project.
+This project is composed by two parts:
 
-🚀 Launch
----------
+- `/client` - Frontend of the application built with React.
+- `/server` - Backend of the application built with Node and Express.
 
-Navigate to the `/contacts-be` folder from a Terminal:
+## Launch
 
-```bash
-cd /contacts-be
-```
-
-Install the project dependencies with yarn:
+From the root of this folder (`packages/04-contacts`), install dependencies:
 
 ```bash
 pnpm install
 ```
 
-Run the node server with the next command:
+Then run both client and server in development mode:
 
 ```bash
-node server.js
+pnpm run dev:server
+pnpm run dev:client
 ```
 
-You should get the next output in your console:
+The server runs on `http://localhost:5001` and the client on `http://localhost:3000`.
 
-```
-Server listening on port 5001
-```
+### Search contacts
 
-In another Terminal navigate to `/contacts-fe` folder:
+![Search Contacts](client/assets/02-search.png)
 
-```bash
-cd /contacts-fe
-```
+### Add a contact
 
-Install the project dependencies with yarn:
-
-```bash
-pnpm install
-```
-
-Run the frontend  server with the next command:
-
-```bash
-pnpm run start
-```
-
-You should get the next view in the `localhost:3000` of your browser:
-
-![Contact App](contacts-fe/assets/01-contacts-fe.png)
+![Add Contact](client/assets/03-add-contact.png)
