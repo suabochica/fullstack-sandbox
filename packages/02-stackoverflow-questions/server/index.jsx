@@ -28,6 +28,7 @@ if (process.env.NODE_ENV === 'development') {
 	const compiler = webpack(config);
 
 	app.use(require('webpack-dev-middleware')(compiler, {
+		publicPath: config.output.publicPath,
 		stats: {
             assets: false,
             colors: true,
@@ -43,6 +44,12 @@ if (process.env.NODE_ENV === 'development') {
 } else {
 	app.use(express.static(path.resolve(__dirname, '../dist')));
 }
+
+app.use(express.static(path.resolve(__dirname, '../public'), { index: false }));
+
+app.get('/styles.css', (_request, response) => {
+	response.sendFile(path.resolve(__dirname, '../client/styles.css'));
+});
 
 function* getQuestions() {
 	let data;
