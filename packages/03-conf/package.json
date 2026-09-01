@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Using react hooks on app",
   "type": "module",
+  "wokspaces": [
+    "client",
+    "server"
+  ],
   "scripts": {
-    "dev": "node server.js",
-    "start": "node server.js"
+    "dev": "node server/server.js",
+    "start": "node server/server.js"
   },
   "keywords": [],
   "author": "Suabochica",

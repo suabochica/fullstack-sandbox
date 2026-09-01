@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 
 const PORT = process.env.PORT ?? 3000;
-const ROOT = import.meta.dirname;
+const ROOT = join(import.meta.dirname, "..");
 
 const MIME_TYPES = {
   ".html": "text/html; charset=utf-8",
@@ -17,7 +17,12 @@ const MIME_TYPES = {
 
 createServer(async (request, response) => {
   const { pathname } = new URL(request.url, "http://localhost");
-  const relativePath = pathname === "/" ? "/index.html" : pathname;
+  let relativePath = pathname === "/" ? "/index.html" : pathname;
+
+  if (relativePath.startsWith("/src/")) {
+    relativePath = `/client${relativePath}`;
+  }
+
   const filePath = join(ROOT, normalize(decodeURIComponent(relativePath)));
 
   if (!filePath.startsWith(ROOT)) {
