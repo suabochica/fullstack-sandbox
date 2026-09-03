@@ -1,0 +1,17 @@
+{
+  "name": "05-search-with-ai-prompt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "dev:server": "pnpm --filter server run watch",
+    "dev:client": "pnpm --filter client run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
